@@ -38,6 +38,7 @@ def read_item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
 
 
-@app.get("/healthz")
-def read_api_health():
+
+@app.get("/healthz/")
+def health_check():
     return {"status": "ok"}
